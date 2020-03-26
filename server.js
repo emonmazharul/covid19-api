@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 5000
 async function start(){
 	try {
 
-		fastify.listen(5000);
+		fastify.listen(PORT);
 		console.log(`server listen on ${PORT}`)
 	}
 	catch (e){

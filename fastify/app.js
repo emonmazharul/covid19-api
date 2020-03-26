@@ -3,6 +3,10 @@ const {scrapJHU,scrapWorldoMeters,allData,scrapJHUBefore22} = require('./scrap/s
 const dateChecker = require('./middleware/checkDate');
 const country = require('./utils/countryModifier');
 
+fastify.register(require('fastify-cors'),{
+	origin:true,
+})
+
 fastify.get('/', (req,reply) => {
 	reply.code(200).send({
 		source1:{
