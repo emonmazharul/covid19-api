@@ -11,8 +11,8 @@ fastify.register(require('fastify-favicon'))
 fastify.get('/', (req,reply) => {
 	reply.code(200).send({
 		source1:{
-			url:`http://emon-covid19.herokuapp.com/source1/mm-dd-2020/[country]`,
-			example:`http://emon-covid19.herokuapp.com/source1/03-23-2020/italy`,
+			url:`https://emon-covid19.herokuapp.com/source1/mm-dd-2020/[country]`,
+			example:`https://emon-covid19.herokuapp.com/source1/03-23-2020/italy`,
 			dataSource:`https://github.com/CSSEGISandData/COVID-19`,
 			copyright:`All right reserved to https://github.com/CSSEGISandData/COVID-19`,
 			opinion:`Data of source1 is less updated than source2. But you can get a specific date's data and specific city/province data from source1 which is very helpfull`,
@@ -20,13 +20,14 @@ fastify.get('/', (req,reply) => {
 
 		},
 		source2:{
-			url:`http://emon-covid19.herokuapp.com/source2/[country]`,
-			example:`http://emon-covid19.herokuapp.com/source2/italy`,
+			url:`https://emon-covid19.herokuapp.com/source2/[country]`,
+			example:`https://emon-covid19.herokuapp.com/source2/italy`,
 			dataSource:`https://www.worldometers.info/coronavirus/`,
 			copyright:`All right reserved to https://www.worldometers.info/coronavirus`,
 			opinion:`Data of source2 is more updated than source1. As source2's source update their data more frequently you can get most updated result`
 		},
 		additionalInfo:{
+			allData:'https://emon-covid19.herokuapp.com/alldata . you get all record of covid-19',
 			message:'If you get empty array then check your country name and do some change. Hope you always get correct data',
 			source1NameConflict:'US/United Kingdom/China. These three country code for source1',
 			source2NameConflict:'USA/UK/China. These three country code for source2'
