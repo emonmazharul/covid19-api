@@ -43,6 +43,7 @@ fastify.get('/alldata', async (req,reply) => {
 		}
 		reply.code(200).send(data);
 	} catch (e) {
+		console.log(e);
 		reply.code(400).send({error:'Could\'t fetch data. Check your network connection'});
 	}
 })
@@ -63,6 +64,7 @@ fastify.route({
 			data = await scrapJHU(`https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_daily_reports/${req.dateInfo.month}-${req.dateInfo.date}-2020.csv`, countryName)
 			reply.code(200).send(data);
 		} catch (e){
+			console.log(e);
 			const errorMessageIndex = e.message.indexOf(':');
 			const errorMessage = e.message.slice(0,errorMessageIndex)
 			if(errorMessage==='net') {
@@ -81,6 +83,7 @@ fastify.get('/source2/:country', async (req,reply) => {
 		const bdScrap = await scrapWorldoMeters('https://www.worldometers.info/coronavirus/', countryName);
 		reply.code(200).send(bdScrap);
 	} catch (e) {
+		console.log(e);
 		reply.code(400).send({error:'Could\'t fetch data. Check your network connection'});
 	}
 });

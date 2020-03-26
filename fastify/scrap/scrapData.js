@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 // for slow internet I have to increase timeout limit.
 
 async function scrapFromWorld(url,yourCountry){
-	const browser = await puppeteer.launch();
+	const browser = await puppeteer.launch({args: ['--no-sandbox']});
 	const page = await browser.newPage();
 	await page.goto(url,{timeout:600000,waitUntill:'networkidle2'});
 
@@ -29,7 +29,7 @@ async function scrapFromWorld(url,yourCountry){
 
 
 async function scrapFromGithub(url,country){
-		const browser = await puppeteer.launch();
+		const browser = await puppeteer.launch({args: ['--no-sandbox']});
 		const page = await browser.newPage();
 		await page.goto(url,{timeout:600000,waitUntill:'networkidle2'});
 
@@ -56,7 +56,7 @@ async function scrapFromGithub(url,country){
 }
 
 async function scrapFromGithubBefore22(url,country){
-			const browser = await puppeteer.launch();
+			const browser = await puppeteer.launch({args: ['--no-sandbox']});
 			const page = await browser.newPage();
 			await page.goto(url,{timeout:600000,waitUntill:'networkidle2'});
 
@@ -84,7 +84,7 @@ async function scrapFromGithubBefore22(url,country){
 
 
 async function allData(url){
-		const browser = await puppeteer.launch();
+		const browser = await puppeteer.launch({args: ['--no-sandbox']});
 		const page = await browser.newPage();
 		await page.goto(url,{timeout:600000,waitUntill:'networkidle2'});
 		const data = await page.evaluate(() => {
