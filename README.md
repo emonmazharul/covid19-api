@@ -1,6 +1,16 @@
-# covid19-api
-A app providing covid 19 daily updates and necessary data.
-It is simple api which provide covid 19 data from two websites.
-You can get the data and can make app using the data.
-All right reserved to https://github.com/CSSEGISandData and https://www.worldometers.info/coronavirus/
-Thank you all.
+# COVID-19 api
+
+# About
+A api which provide all covid-19's daily update and necessary data.You can make amazing application by using this api.
+
+# Website
+[emon-covid-19](https://emon-covid19.herokuapp.com/)
+
+# Tech Used
+[Fastify](https://www.npmjs.com/package/fastify) for making api <br>
+[Puppteer](https://www.npmjs.com/package/puppeteer) for scraping data<br>
+[Jest](https://www.npmjs.com/package/jest) for testing
+
+# Copyright
+All right reserved to [John Hopkin University](https://github.com/CSSEGISandData)
+[World Meters website ](https://www.worldometers.info/)
