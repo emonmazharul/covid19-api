@@ -6,6 +6,7 @@ const country = require('./utils/countryModifier');
 fastify.register(require('fastify-cors'),{
 	origin:true,
 })
+fastify.register(require('fastify-favicon'))
 
 fastify.get('/', (req,reply) => {
 	reply.code(200).send({
