@@ -11,7 +11,7 @@ I decide to change tool for scraping data so I used cheerio to make the job done
 
 # Tech Used
 [Fastify](https://www.npmjs.com/package/fastify) for making api <br>
-[Puppteer](https://www.npmjs.com/package/puppeteer) for scraping data<br>
+[Cheerio](https://www.npmjs.com/package/cheerio) for scraping data <br>
 [Jest](https://www.npmjs.com/package/jest) for testing
 
 # Copyright
