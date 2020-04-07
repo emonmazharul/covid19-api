@@ -3,6 +3,9 @@
 # About
 A api which provide all covid-19's daily update and necessary data.You can make amazing application by using this api.
 
+# Info
+I decide to change tool for scraping data. So I change puppteer with cheerio. check branch2 to see the chagnes.
+
 # Website
 [emon-covid-19](https://emon-covid19.herokuapp.com/)
 
