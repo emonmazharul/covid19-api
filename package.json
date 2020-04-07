@@ -6,11 +6,13 @@
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js",
-    "test": "jest"
+    "test": "jest --detectOpenHandles"
   },
   "author": "Mazharul Islam",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "fastify": "^2.13.0",
@@ -18,7 +20,8 @@
     "fastify-favicon": "^2.0.0",
     "jest-puppeteer": "^4.4.0",
     "puppeteer": "^2.0.0",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5"
   },
   "devDependencies": {
     "jest": "^25.1.0",
