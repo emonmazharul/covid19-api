@@ -18,7 +18,6 @@ fastify.get('/', (req,reply) => {
 			copyright:`All right reserved to https://github.com/CSSEGISandData/COVID-19`,
 			opinion:`Data of source1 is less updated than source2. But you can get a specific date's data and specific city/province data from source1 which is very helpfull`,
 			whyDateInParam:`As John Hopkin University post data on regular basis, I have to add date in the url params for acurate data and handling errors. `
-
 		},
 		{
 			sourceName:'source2',
@@ -65,6 +64,7 @@ fastify.route({
 			data = await scrapJHU(`https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_daily_reports/${req.dateInfo.month}-${req.dateInfo.date}-2020.csv`, countryName)
 				reply.code(200).send(data);
 		} catch (e){
+			console.log(e)
 			reply.code(400).send([])
 		}
 
@@ -78,6 +78,7 @@ fastify.get('/source2/:country', async (req,reply) => {
 		const bdScrap = await scrapWorldoMeters('https://www.worldometers.info/coronavirus/', countryName);
 		reply.code(200).send(bdScrap);
 	} catch (e) {
+		console.log(e)
 		reply.code(400).send([])
 
 	}

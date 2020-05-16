@@ -116,7 +116,7 @@ async function scrapFromWorld(url,country) {
 
 
 	for(let i=0; i<tbody.length;i++){
-		let targetChild = $(tbody[i]).children()[0];
+		let targetChild = $(tbody[i]).children()[1];
 		let targetChildText = $(targetChild).text();
 		if(targetChildText===country){
 			targetTr = $(tbody[i]);

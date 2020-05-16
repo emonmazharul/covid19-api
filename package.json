@@ -4,7 +4,7 @@
   "description": "web scraping",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server.js",
+    "dev": "nodemon ./cheerio/scrapbd.js",
     "start": "node server.js",
     "test": "jest --detectOpenHandles"
   },
@@ -19,6 +19,7 @@
     "fastify-cors": "^3.0.2",
     "fastify-favicon": "^2.0.0",
     "jest-puppeteer": "^4.4.0",
+    "pdf-parse": "^1.1.1",
     "puppeteer": "^2.0.0",
     "request": "^2.88.0",
     "request-promise": "^4.2.5"
