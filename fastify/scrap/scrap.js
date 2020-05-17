@@ -115,7 +115,7 @@ async function scrapFromWorld(url,country) {
 	const keys = $(headers).children()
 
 
-	for(let i=1; i<tbody.length;i++){
+	for(let i=0; i<tbody.length;i++){
 		let targetChild = $(tbody[i]).children()[1];
 		let targetChildText = $(targetChild).text();
 		if(targetChildText===country){
@@ -124,7 +124,7 @@ async function scrapFromWorld(url,country) {
 		}
 	}
 	const tds = targetTr.children();
-	for(let i=0;i<tds.length;i++){
+	for(let i=1;i<tds.length;i++){
 		result[0][$(keys[i]).text()] = $(tds[i]).text();
 	} 
 	return result;
